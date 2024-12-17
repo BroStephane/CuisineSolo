@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# ViteJS / React
+dist/
+.vite/
+.env
+.env.local
+.env.development
+.env.production
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+prisma/migrations/
+
+# Database
+*.sqlite
+*.sqlite-journal
+
+# Build
+/build
+/temp
+/out
+coverage/
+test/
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# System Files
+Thumbs.db
+.DS_Store
