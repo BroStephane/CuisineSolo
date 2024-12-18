@@ -1,9 +1,13 @@
 const express = require("express");
+const app = express();
 const cors = require("cors");
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-const app = express();
+const authRoutes = require("./routes/auth.routes");
+
+// Middleware pour parser le JSON dans le corps des requêtes
+app.use(express.json());
 const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -28,5 +32,8 @@ app.get("/", async (req, res) => {
         res.status(500).json({ message: "Erreur de connexion à la BDD" });
     }
 });
+
+// Routes
+app.use("/api/auth", authRoutes);
 
 module.exports = app;
